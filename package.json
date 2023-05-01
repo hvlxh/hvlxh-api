@@ -1,6 +1,6 @@
 {
   "name": "hvlxh-api",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A discord.js api/framework to build events and slash commands!",
   "main": "build/index.js",
   "typings": "build/index.d.ts",
