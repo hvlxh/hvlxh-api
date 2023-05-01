@@ -1,23 +1,23 @@
 {
-  "name": "advanced-template",
+  "name": "hvlxh-api",
   "version": "1.0.0",
-  "description": "",
+  "description": "A discord.js api/framework to build events and slash commands!",
   "main": "build/index.js",
-  "type": "module",
+  "typings": "build/index.d.ts",
   "scripts": {
-    "build:eslint": "eslint .",
+    "build:lint": "eslint .",
     "build:compile": "tsc",
-    "build:lint": "standard --fix .",
     "build:start": "node .",
-    "build": "npm run build:eslint && npm run build:compile && npm run build:lint && npm run build:start",
-    "start": "node --loader ts-node/esm src/index.ts",
-    "start:dev": "nodemon src/index.ts"
+    "build": "npm run build:lint && npm run build:compile",
+    "dev": "nodemon src/index.ts",
+    "prepublishOnly": "npm run build"
   },
   "keywords": [],
-  "author": "",
+  "author": "hvlxh",
   "license": "ISC",
   "devDependencies": {
-    "@types/node": "^18.16.0",
+    "@microsoft/tsdoc": "^0.14.2",
+    "@types/node": "^18.16.3",
     "@typescript-eslint/eslint-plugin": "^5.59.1",
     "@typescript-eslint/parser": "^5.59.1",
     "eslint": "^8.39.0",
@@ -29,5 +29,10 @@
     "standard": "^17.0.0",
     "ts-node": "^10.9.1",
     "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "discord.js": "^14.9.0",
+    "table": "^6.8.1"
   }
 }
